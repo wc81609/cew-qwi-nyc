@@ -3,7 +3,7 @@ body {
   background-color: #FFFFFF;
   margin-left: 25px;
 }
-
+	
 #footnote {
   font-size: 70%;
   clear: both;
@@ -16,15 +16,26 @@ body {
   font-style: italic;
   font-weight: bold;
 }
+
 /* Styles for containers/divs for charts */
 #div_occmap,
-#div_empnum, #div_hirenum , #div_empearn, #div_hirearn,
-#div_empnum2, #div_hirenum2 , #div_empearn2, #div_hirearn2 {
+#div_empnum, #div_hirenum , #div_empearn, #div_hirearn {
   position: relative;
   padding-top: 20px;
   padding-bottom: 10px;
   padding-right: 10px;
   border-width: 1px;
+  border-style: solid;
+  border-color: #000000;
+  margin-bottom: 20px;
+}
+
+#div_empnum2, #div_hirenum2 , #div_empearn2, #div_hirearn2 {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  border-width: 0px;
   border-style: solid;
   border-color: #000000;
   margin-bottom: 20px;
@@ -158,4 +169,39 @@ div.tabcontents
     border: 1px solid #B7B7B7; padding: 30px;
     background-color:#FFF;
     border-radius: 0 3px 3px 3px;
+}
+
+/* Styles for Media Query */
+* {
+    box-sizing: border-box;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
 }
